@@ -1,0 +1,12 @@
+function getUserData(id) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const user = { id, name: "Alexis" };
+      resolve(user);
+    }, 1000);
+  });
+}
+
+getUserData(1)
+  .then(user => console.log("Usuario obtenido con promesa:", user))
+  .catch(error => console.error("Error:", error));
