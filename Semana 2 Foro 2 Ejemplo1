@@ -1,0 +1,10 @@
+function getUserData(id, callback) {
+  setTimeout(() => {
+    const user = { id, name: "Alexis" };
+    callback(user);
+  }, 1000);
+}
+
+getUserData(1, (user) => {
+  console.log("Usuario obtenido con callback:", user);
+});
